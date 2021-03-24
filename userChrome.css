@@ -1,37 +1,40 @@
 *{
-    font-family: 'SF Pro Display' !important;
-    border: none !important;
-    outline: none !important;
-}#navigator-toolbox{
+    font-family: 'SF Pro' !important;
+    border: none !important; outline: none !important; box-shadow: none !important;
+}
+
+#navigator-toolbox, #sidebar-box, #TabsToolBar, #PersonalToolbar, #nav-bar, #urlbar, #urlbar-background, #urlbar-input-container, .titlebar-button, .toolbar-items{
     background-color: rgb(24, 27, 40) !important;
-}#navigator-toolbox *{
-    background-color: rgb(24, 27, 40) !important;
-}#navigator-toolbox * *{
-    background-color: inherit !important;
+    color: white !important;
+}
+toolbox#navigator-toolbox{
+    --tabs-border-color: transparent !important;
 }
 /* Div separando as abas dos botões */
 .titlebar-spacer{
-    display: none !important;
+    
 }
 /* Div contendo -> botões de fechar, minimizar, maximizar e as abas */
-#TabsToolBar{
-    
+toolbar#TabsToolbar{
+    padding: 10px !important;
 }
     /* Div contendo apenas as abas */
     .toolbar-items{
-        display: flex;
-        justify-content: center;
-        transform: translateX(120px);
+        
     }
+        tab, tab *, .tab-background[selected="true"]{
+            /* Faz as abas terem bordas arredondadas e remove cor de fundo de divs internas */
+            background-color: transparent !important;
+            border-radius: 10px !important;
+        }
+        .tab-content:not([selected="true"]){
+            /* Remove bordas separadoras de abas não selecionadas */
+            outline: 1px solid rgb(24, 27, 40) !important;
+        }
         /* O interior da aba selecionada/ativa */
         .tab-content[selected="true"]{
-            background: linear-gradient(to right, rgb(56, 96, 255), rgb(198, 35, 255));
-            padding: 0 !important;
-        }
-        tab:not([pinned="true"]){
-            width: 220px !important;
-            max-width: 220px !important;
-            padding: 5px 10px !important;
+            background: linear-gradient(to right, rgb(56, 96, 255), rgb(198, 35, 255)) !important;
+            color: white !important;
         }
     /* Div contendo apenas os botões */
     .titlebar-buttonbox-container{
