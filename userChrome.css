@@ -48,19 +48,49 @@
                 .toolbarbutton-icon{
 
                 }
-                /* Cada um dos 3 botões da esquerda para a direita */
+                /* Botão Minimize (Minimizar) */
                 .titlebar-min image{
-                    list-style-image: url('img/minimize.png') !important;
-                }.titlebar-max image{
-                    list-style-image: url('img/maximize.png') !important;
-                }.titlebar-restore image{
-                    list-style-image: url('img/maximize.png') !important;
-                }.titlebar-close image{
-                    list-style-image: url('img/close.png') !important;
-                }.titlebar-close image:{
-                    
+                    list-style-image: none !important;
+                    opacity: 0 !important;
+                }.titlebar-min{
+                    background-image: url('img/minimize.png');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }.titlebar-min:hover{
+                    opacity: 0.5 !important;
+                }
+                /* Botão Maximize (Maximizar) */
+                .titlebar-max image{
+                    list-style-image: none !important;
+                    opacity: 0 !important;
+                }.titlebar-max{
+                    background-image: url('img/maximize.png');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }.titlebar-max:hover{
+                    opacity: 0.5 !important;
+                }
+                /* Botão Restore (Restaurar) */
+                .titlebar-restore image{
+                    list-style-image: none !important;
+                    opacity: 0 !important;
+                }.titlebar-restore{
+                    background-image: url('img/maximize.png');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }.titlebar-restore:hover{
+                    opacity: 0.5 !important;
+                }
+                /* Botão Close (Fechar) */
+                .titlebar-close image{
+                    list-style-image: none !important;
+                    opacity: 0 !important;
+                }.titlebar-close{
+                    background-image: url('img/close.png');
+                    background-repeat: no-repeat;
+                    background-position: center center;
                 }.titlebar-close:hover{
-                    filter: brightness(50%) !important;
+                    opacity: 0.5 !important;
                 }
 
 /* Div contendo -> botões de voltar, avançar, barra de pesquisa, etc. */
