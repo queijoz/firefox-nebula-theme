@@ -30,6 +30,7 @@ toolbar#TabsToolbar{
         .tab-content:not([selected="true"]){
             /* Remove bordas separadoras de abas não selecionadas */
             outline: 1px solid rgb(24, 27, 40) !important;
+            z-index: 2;
         }
         /* O interior da aba selecionada/ativa */
         .tab-content[selected="true"]{
