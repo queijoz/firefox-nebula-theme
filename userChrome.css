@@ -3,7 +3,7 @@
     border: none !important; outline: none !important; box-shadow: none !important;
 }
 
-#navigator-toolbox, #sidebar-box, #TabsToolBar, #PersonalToolbar, #nav-bar, #urlbar, #urlbar-background, #urlbar-input-container, .titlebar-button, .toolbar-items{
+#navigator-toolbox, #sidebar-box, #TabsToolBar, #PersonalToolbar, #nav-bar, #urlbar, #urlbar-background, #urlbar-input-container, .titlebar-button, .toolbar-items, #appMenu-mainView{
     background-color: rgb(24, 27, 40) !important;
     color: white !important;
 }
@@ -17,6 +17,7 @@ toolbox#navigator-toolbox{
 /* Div contendo -> botões de fechar, minimizar, maximizar e as abas */
 toolbar#TabsToolbar{
     padding: 10px !important;
+    
 }
     /* Div contendo apenas as abas */
     .toolbar-items{
@@ -27,6 +28,10 @@ toolbar#TabsToolbar{
             background-color: transparent !important;
             border-radius: 10px !important;
         }
+        :root[uidensity="touch"]{
+            --inline-tab-padding: 9px 0 !important;
+            --tab-min-height: 0 !important;
+        }
         .tab-content:not([selected="true"]){
             /* Remove bordas separadoras de abas não selecionadas */
             outline: 1px solid rgb(24, 27, 40) !important;
@@ -34,7 +39,7 @@ toolbar#TabsToolbar{
         }
         /* O interior da aba selecionada/ativa */
         .tab-content[selected="true"]{
-            background: linear-gradient(to right, rgb(56, 96, 255), rgb(198, 35, 255)) !important;
+            background: linear-gradient(to left, rgb(56, 96, 255), rgb(198, 35, 255)) !important;
             color: white !important;
         }
     /* Div contendo apenas os botões */
